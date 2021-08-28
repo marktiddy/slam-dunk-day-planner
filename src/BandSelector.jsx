@@ -80,13 +80,14 @@ const BandSelector = ({ site, bands, step, setStep, setBands }) => {
       )}
       <div className="w-full">
         <p
-          className="rounded bg-red-600 shadow-xl my-4 p-4 font-extrabold text-white text-center uppercase cursor-pointer transition-all hover:opacity-75"
+          className="rounded bg-red-600 shadow-xl my-4 p-4 font-extrabold text-white text-center uppercase cursor-pointer transition-all md:hover:opacity-75"
           onClick={() => finishSelection()}
         >
           Finished? <br />
           Click here to create your custom plan
         </p>
       </div>
+      {/* <div className="bg-black"></div> */}
     </>
   );
 };
