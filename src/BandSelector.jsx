@@ -15,7 +15,7 @@ const BandSelector = ({ site, bands, step, setStep, setBands }) => {
   const chooseBand = (band) => {
     if (chosenBands) {
       //Check if band is already there
-      if (chosenBands.filter((e) => e.name == band.name).length > 0) {
+      if (chosenBands.filter((e) => e.name === band.name).length > 0) {
         //Need to remove
         const newBandSelection = chosenBands.filter((e) => {
           return e.name !== band.name && e;
@@ -55,7 +55,7 @@ const BandSelector = ({ site, bands, step, setStep, setBands }) => {
           return (
             <div
               className={`${
-                chosenBands.filter((e) => e.name == band.name).length > 0
+                chosenBands.filter((e) => e.name === band.name).length > 0
                   ? bgcols[index]
                   : "bg-gray-600"
               } rounded p-4 w-full my-2 text-center shadow-xl flex justify-center items-center flex-col cursor-pointer transition-all hover:opacity-75`}
