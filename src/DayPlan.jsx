@@ -68,6 +68,12 @@ const DayPlan = ({ bands, setBands, setSite, site, setStep }) => {
       </p>
       <div id="dayplan" className="p-1 grid grid-cols-1 md:grid-cols-2 gap-2">
         {sortedBands.map((b, i) => {
+          let bandName = b.name;
+          if (bandName === "Special Guest Headliner") {
+            bandName = "Boston Manor";
+          } else if (bandName === "Days N Daze") {
+            bandName = "Buster Shuffle";
+          }
           return (
             <div
               className={`${
@@ -80,12 +86,7 @@ const DayPlan = ({ bands, setBands, setSite, site, setStep }) => {
                   stagecols.text[b.stage]
                 } font-extrabold uppercase text-xl mb-1 px-2 pt-2`}
               >
-                {b.name === "Special Guest Headliner" && "Boston Manor"}
-                {b.name === "Days N Daze" && "Buster Shuffle"}
-                {b.name !== "Special Guest Headliner" ||
-                b.name !== "Days N Daze"
-                  ? b.name
-                  : ""}
+                {bandName}
               </p>
               <p
                 className={`${stagecols.text[b.stage]} text-lg font-light px-2`}
