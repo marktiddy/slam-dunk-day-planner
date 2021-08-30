@@ -116,7 +116,7 @@ export const bands = [
         end: "13:05",
       },
       {
-        name: "Days N Daze",
+        name: "Buster Shuffle",
         stage: "punk in drublic",
         start: "11:45",
         end: "12:15",
@@ -201,7 +201,7 @@ export const bands = [
         end: "12:10",
       },
       {
-        name: "Special Guest Headliner",
+        name: "Boston Manor",
         stage: "The Key Club (Left Key)",
         start: "20:20",
         end: "20:55",
@@ -418,7 +418,7 @@ export const bands = [
       },
 
       {
-        name: "Days N Daze",
+        name: "Buster Shuffle",
         stage: "punk in drublic",
         start: "12:35",
         end: "13:05",
@@ -509,7 +509,7 @@ export const bands = [
         end: "12:10",
       },
       {
-        name: "Special Guest Headliner",
+        name: "Boston Manor",
         stage: "The Key Club (Left Key)",
         start: "20:20",
         end: "20:55",

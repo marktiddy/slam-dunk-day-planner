@@ -41,6 +41,7 @@ const BandSelector = ({ site, bands, step, setStep, setBands }) => {
       setBands(chosenBands);
       setStep(step + 1);
     }
+    window.scrollTo(0, 0);
   };
 
   return (
