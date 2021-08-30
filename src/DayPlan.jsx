@@ -81,7 +81,11 @@ const DayPlan = ({ bands, setBands, setSite, site, setStep }) => {
                 } font-extrabold uppercase text-xl mb-1 px-2 pt-2`}
               >
                 {b.name === "Special Guest Headliner" && "Boston Manor"}
-                {b.name === "Days N Daze" ? "Buster Shuffle" : b.name}
+                {b.name === "Days N Daze" && "Buster Shuffle"}
+                {b.name !== "Special Guest Headliner" ||
+                b.name !== "Days N Daze"
+                  ? b.name
+                  : ""}
               </p>
               <p
                 className={`${stagecols.text[b.stage]} text-lg font-light px-2`}
