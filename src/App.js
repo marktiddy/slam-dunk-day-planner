@@ -11,6 +11,7 @@ const App = () => {
   const [site, setSite] = useState();
   const [bands, setBands] = useState(bandJson);
   const [isLoading, setIsLoading] = useState(true);
+  const [chosenBands, setChosenBands] = useState([]);
 
   useEffect(() => {
     const localStoredBands = localStorage.getItem("slamDunkBands");
@@ -20,6 +21,7 @@ const App = () => {
         setSite(localSite);
       }
       setBands(JSON.parse(localStoredBands));
+      setChosenBands(JSON.parse(localStoredBands));
       setStep(2);
       setIsLoading(false);
     } else {
@@ -64,6 +66,8 @@ const App = () => {
             site={site}
             bands={bands}
             setBands={setBands}
+            chosenBands={chosenBands}
+            setChosenBands={setChosenBands}
           />
         )}
         {step === 2 && (

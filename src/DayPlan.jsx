@@ -44,6 +44,13 @@ const DayPlan = ({ bands, setBands, setSite, site, setStep }) => {
     setStep(0);
   };
 
+  const changeSelection = () => {
+    //localStorage.removeItem("slamDunkBands");
+    //localStorage.removeItem("slamDunkSite");
+    setBands(defaultBands);
+    setStep(1);
+  };
+
   return (
     <div className="w-full text-center">
       <h2 className="text-red-600 font-extrabold my-2 text-center capitalize">
@@ -61,12 +68,21 @@ const DayPlan = ({ bands, setBands, setSite, site, setStep }) => {
         Save Day Plan
       </p>
       <p
+        onClick={() => changeSelection()}
+        className="bg-blue-600 text-white rounded m-auto py-1 px-2 text-xs inline-block font-extrabold text-center mt-2 cursor-pointer ml-2 transition-all hover:opacity-75"
+      >
+        Change Selection
+      </p>
+      <p
         onClick={() => reset()}
         className="bg-yellow-400 text-black rounded m-auto py-1 px-2 text-xs inline-block font-extrabold text-center mt-2 ml-2 cursor-pointer transition-all hover:opacity-75"
       >
-        Start Again
+        Start Over
       </p>
-      <div id="dayplan" className="p-1 grid grid-cols-1 md:grid-cols-2 gap-2">
+      <div
+        id="dayplan"
+        className="p-1 grid grid-cols-1 md:grid-cols-2 gap-1 mt-2"
+      >
         {sortedBands.map((b, i) => {
           let bandName = b.name;
           if (bandName === "Special Guest Headliner") {
@@ -78,7 +94,7 @@ const DayPlan = ({ bands, setBands, setSite, site, setStep }) => {
             <div
               className={`${
                 stagecols.background[b.stage]
-              } rounded w-full my-4 text-center shadow-xl`}
+              } rounded w-full my-2 text-center shadow-xl`}
               key={i}
             >
               <p
@@ -99,8 +115,15 @@ const DayPlan = ({ bands, setBands, setSite, site, setStep }) => {
                 } font-extrabold uppercase text-sm mb-1 px-2 pb-2`}
               >
                 Starts: {b.start} (
-                {moment("08/04/2021 " + b.start).format("h:mm a")}) <br />
-                Ends: {b.end} ({moment("08/04/2021 " + b.end).format("h:mm a")})
+                {moment("08/04/2021 " + b.start, "MM/DD/YYYY HH:mm").format(
+                  "h:mm a"
+                )}
+                ) <br />
+                Ends: {b.end} (
+                {moment("08/04/2021 " + b.end, "MM/DD/YYYY HH:mm").format(
+                  "h:mm a"
+                )}
+                )
               </p>
               {i < bands.length - 1 &&
                 minutesOfDate(b.end) > minutesOfDate(bands[i + 1].start) && (

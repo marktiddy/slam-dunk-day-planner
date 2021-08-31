@@ -1,8 +1,15 @@
 import React, { useState } from "react";
-import { bgcols } from "./bands";
+import { stagecols } from "./bands";
 
-const BandSelector = ({ site, bands, step, setStep, setBands }) => {
-  const [chosenBands, setChosenBands] = useState([]);
+const BandSelector = ({
+  site,
+  bands,
+  step,
+  setStep,
+  setBands,
+  chosenBands,
+  setChosenBands,
+}) => {
   const [error, setError] = useState(false);
   let siteBands;
 
@@ -57,9 +64,9 @@ const BandSelector = ({ site, bands, step, setStep, setBands }) => {
             <div
               className={`${
                 chosenBands.filter((e) => e.name === band.name).length > 0
-                  ? bgcols[index]
+                  ? stagecols.background[band.stage]
                   : "bg-gray-600"
-              } rounded p-4 w-full my-2 text-center shadow-xl flex justify-center items-center flex-col cursor-pointer transition-all hover:opacity-75`}
+              } rounded p-4 w-full my-2 text-center shadow-xl flex justify-center items-center flex-col cursor-pointer`}
               key={index}
               onClick={() => chooseBand(band)}
             >
