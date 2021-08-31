@@ -201,8 +201,8 @@ export const bands = [
         end: "12:10",
       },
       {
-        name: "Special Guest Headliner",
-        stage: "The Key Club (Left Key)",
+        name: "Boston Manor",
+        stage: "The Key Club Stage (Left Key)",
         start: "20:20",
         end: "20:55",
       },
@@ -509,8 +509,8 @@ export const bands = [
         end: "12:10",
       },
       {
-        name: "Special Guest Headliner",
-        stage: "The Key Club (Left Key)",
+        name: "Boston Manor",
+        stage: "The Key Club Stage (Left Key)",
         start: "20:20",
         end: "20:55",
       },
