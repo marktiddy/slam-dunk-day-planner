@@ -54,7 +54,7 @@ const BandSelector = ({
   return (
     <>
       <div className="w-full">
-        <h2 className="text-red-600 font-extrabold my-4 text-center capitalize">
+        <h2 className="text-white font-extrabold my-4 text-center capitalize">
           Choose which bands you want to see at Slam Dunk {site}
         </h2>
       </div>
@@ -66,7 +66,7 @@ const BandSelector = ({
                 chosenBands.filter((e) => e.name === band.name).length > 0
                   ? stagecols.background[band.stage]
                   : "bg-gray-600"
-              } rounded p-4 w-full my-2 text-center shadow-xl flex justify-center items-center flex-col cursor-pointer`}
+              } rounded border p-4 w-full my-2 text-center shadow-xl flex justify-center items-center flex-col cursor-pointer`}
               key={index}
               onClick={() => chooseBand(band)}
             >
@@ -80,7 +80,7 @@ const BandSelector = ({
       </div>
       {error && (
         <div className="w-full">
-          <p className="rounded border-4 border-red-600 shadow-xl my-4 p-4 font-extrabold text-red-600 text-center uppercase">
+          <p className="rounded border-4 border-white shadow-xl my-4 p-4 font-extrabold text-white text-center uppercase">
             Looks like you haven't chosen any bands! Pick some bands...there's
             an awesome line-up
           </p>
@@ -88,14 +88,13 @@ const BandSelector = ({
       )}
       <div className="w-full">
         <p
-          className="rounded bg-red-600 shadow-xl my-4 p-4 font-extrabold text-white text-center uppercase cursor-pointer transition-all md:hover:opacity-75"
+          className="rounded bg-red-800 shadow-xl my-4 p-4 font-extrabold text-white text-center uppercase cursor-pointer transition-all md:hover:opacity-75"
           onClick={() => finishSelection()}
         >
           Finished? <br />
           Click here to create your custom plan
         </p>
       </div>
-      {/* <div className="bg-black"></div> */}
     </>
   );
 };

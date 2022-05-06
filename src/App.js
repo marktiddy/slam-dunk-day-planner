@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "./assets/logo.gif";
+import logo from "./assets/logo.png";
 import SiteSelector from "./SiteSelector";
 import BandSelector from "./BandSelector";
 import DayPlan from "./DayPlan";
@@ -38,19 +38,19 @@ const App = () => {
   }
 
   return (
-    <>
+    <div className="bg-blue-900">
       {window.innerWidth > 640 && (
         <div className="absolute bg-yellow-400 text-black text-center p-4 right-0 left-0 top-0 font-extrabold uppercase">
           This site is best viewed on mobile
         </div>
       )}
-      <div className="min-h-screen flex justify-start items-center bg-white p-4 flex-col">
-        <img src={logo} alt="Logo" className="w-4/5" />
-        <div className="rounded bg-red-600 p-4 my-4">
-          <h1 className="text-white text-xl font-extrabold tracking-wider text-center">
+      <div className="min-h-screen flex justify-start items-center p-4 flex-col">
+        <img src={logo} alt="Logo" className="h-36 mx-auto mt-16" />
+        <div className="rounded bg-white border-2 p-4 my-4">
+          <h1 className="text-blue-800 text-xl font-extrabold tracking-wider text-center">
             Slam Dunk 2021 Day Planner
           </h1>
-          <p className="mt-2 text-white text-center text-sm text-center">
+          <p className="mt-2 text-blue-800 text-sm text-center">
             This unofficial WebApp will let you choose the bands you want to see
             and show you a customised day plan for Slam Dunk including any
             clashes.
@@ -81,7 +81,7 @@ const App = () => {
         )}
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

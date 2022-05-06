@@ -53,17 +53,17 @@ const DayPlan = ({ bands, setBands, setSite, site, setStep }) => {
 
   return (
     <div className="w-full text-center">
-      <h2 className="text-red-600 font-extrabold my-2 text-center capitalize">
+      <h2 className="text-white font-extrabold my-2 text-center capitalize">
         Here's your day plan for Slam Dunk {site}
       </h2>
-      <p className="text-xs text-center">
+      <p className="text-xs text-center text-white">
         Your personalised plan has saved to your browser so it'll be here when
         you revisit. Don't forget to bookmark this site or add it to your
         homescreen
       </p>
       <p
         onClick={() => createDownload()}
-        className="bg-red-600 text-white rounded m-auto py-1 px-2 text-xs inline-block font-extrabold text-center mt-2 cursor-pointer transition-all hover:opacity-75"
+        className="bg-red-800 text-white rounded m-auto py-1 px-2 text-xs inline-block font-extrabold text-center mt-2 cursor-pointer transition-all hover:opacity-75"
       >
         Save Day Plan
       </p>
