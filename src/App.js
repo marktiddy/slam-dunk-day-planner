@@ -48,7 +48,7 @@ const App = () => {
         <img src={logo} alt="Logo" className="h-36 mx-auto mt-16" />
         <div className="rounded bg-white border-2 p-4 my-4">
           <h1 className="text-blue-800 text-xl font-extrabold tracking-wider text-center">
-            Slam Dunk 2021 Day Planner
+            Slam Dunk 2022 Day Planner
           </h1>
           <p className="mt-2 text-blue-800 text-sm text-center">
             This unofficial WebApp will let you choose the bands you want to see
