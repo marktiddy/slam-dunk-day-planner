@@ -176,7 +176,7 @@ export const bands = [
         end: "12:50",
       },
       {
-        name: "Chink! No. Captain Chunk!",
+        name: "Chunk! No. Captain Chunk!",
         stage: "Rock Sound Stage",
         start: "13:10",
         end: "13:45",
@@ -516,7 +516,7 @@ export const bands = [
         end: "12:50",
       },
       {
-        name: "Chink! No. Captain Chunk!",
+        name: "Chunk! No. Captain Chunk!",
         stage: "Rock Sound Stage",
         start: "13:10",
         end: "13:45",
